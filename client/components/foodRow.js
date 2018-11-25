@@ -10,6 +10,7 @@ import {
   Button,
 } from 'react-native';
 import { MonoText } from './StyledText';
+import { Icon } from 'react-native-elements'
 
 export default class FoodRow extends React.Component {
   static navigationOptions = {
@@ -22,18 +23,24 @@ export default class FoodRow extends React.Component {
         <Text style={styles.foodName}>{this.props.food.name}</Text>
         <Text style={styles.foodDiningHall}>{this.props.food.diningHall}</Text>
         <View style={styles.buttonContainer}>
-          <Button
-            style={styles.thumbsUp}
-            onPress={() => this.props.handleThumbsUp(this.props.food.id)}
-            title="Thumbs Up"
-            color="#32EB4A"
-          />
-          <Button
-            style={styles.thumbsDown}
-            onPress={() => this.props.handleThumbsDown(this.props.food.id)}
-            title="Thumbs Down"
-            color="#eb2f39"
-          />
+          <TouchableOpacity style={styles.thumbsUp} onPress={() => this.props.handleThumbsUp(this.props.food.id)}>
+            <View style={styles.iconContainer}>
+              <Icon
+                name='thumb-up'
+                color="#00A591"
+              />
+              <Text style={styles.thumbsUpText}>{this.props.food.thumbsUp}</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.thumbsDown} onPress={() => this.props.handleThumbsDown(this.props.food.id)}>
+            <View style={styles.iconContainer}>
+              <Icon
+                name='thumb-down'
+                color="#E94B3C"
+              />
+              <Text style={styles.thumbsDownText}>{this.props.food.thumbsDown}</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -60,15 +67,34 @@ const styles = StyleSheet.create({
     flexDirection:'row',
   },
   thumbsUp: {
+    width: '50%',
     borderWidth: 2,
     borderRadius: 4,
-    borderColor: 'green',
-    color: 'green',
+    borderColor: '#00A591',
+    flexDirection:'row',
+    alignItems: 'center',
+    textAlign: 'center',
+  },
+  thumbsUpText: {
+    color: '#00A591',
+    fontSize: 14,
+    marginLeft: 5,
   },
   thumbsDown: {
+    width: '50%',
     borderWidth: 2,
     borderRadius: 4,
-    borderColor: 'red',
-    color: 'red',
+    borderColor: '#E94B3C',
+  },
+  thumbsDownText: {
+    color: '#E94B3C',
+    fontSize: 14,
+    marginLeft: 5,
+  },
+  iconContainer: {
+    flexDirection:'row',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginLeft: 45,
   },
 });

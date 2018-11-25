@@ -11,7 +11,7 @@ import {
 import { MonoText } from '../components/StyledText';
 import FoodRow from './foodRow';
 
-const tempTop5Foods = [
+var tempTop5Foods = [
   {id: 1, name: "Philly Cheese Steak Sandwich", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
   {id: 2, name: "Hamburger Patty", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
   {id: 3, name: "Crispy Fish Taco", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
@@ -20,16 +20,27 @@ const tempTop5Foods = [
 ];
 
 export default class PageContainer extends React.Component {
+  constructor() {
+    super();
+    this.state = {top5Foods: tempTop5Foods};
+  }
+
   static navigationOptions = {
     header: null,
   };
 
   handleThumbsUp = foodId => {
-    console.log(foodId);
+    var clonedArray = JSON.parse(JSON.stringify(this.state.top5Foods));
+    var food = clonedArray.find((el) => el.id == foodId);
+    food.thumbsUp += 1
+    this.setState({top5Foods: clonedArray});
   }
 
   handleThumbsDown = foodId => {
-    console.log(foodId);
+    var clonedArray = JSON.parse(JSON.stringify(this.state.top5Foods));
+    var food = clonedArray.find((el) => el.id == foodId);
+    food.thumbsDown += 1
+    this.setState({top5Foods: clonedArray});
   }
 
   render() {
@@ -38,7 +49,10 @@ export default class PageContainer extends React.Component {
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <Text style={styles.header}>Top 5 Dining Foods</Text>
           <View style={styles.top5Container}>
-            {tempTop5Foods.map(f => {
+            <View style={styles.timeOfDayContainer}>
+              <Text style={styles.timeOfDay}>Lunch</Text>
+            </View>
+            {this.state.top5Foods.map(f => {
                 return <FoodRow
                     key={f.id}
                     food={f}
@@ -49,13 +63,13 @@ export default class PageContainer extends React.Component {
           </View>
         </ScrollView>
 
-        <View style={styles.tabBarInfoContainer}>
+        {/*<View style={styles.tabBarInfoContainer}>
           <Text style={styles.tabBarInfoText}>Current Menu:</Text>
 
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
             <MonoText style={styles.codeHighlightText}>Lunch</MonoText>
           </View>
-        </View>
+        </View>*/}
       </View>
     );
   }
@@ -97,8 +111,20 @@ export default class PageContainer extends React.Component {
 const styles = StyleSheet.create({
   header: {
     fontSize: 20,
-    marginTop: 50,
     textAlign: 'center',
+    marginTop: 10,
+  },
+  timeOfDayContainer: {
+    alignItems: 'center',
+    width: '30%',
+    backgroundColor: "#00A591",
+    marginBottom: 5
+  },
+  timeOfDay: {
+    fontSize: 20,
+    marginTop: 0,
+    textAlign: 'center',
+    color: 'white',
   },
   container: {
     flex: 1,
