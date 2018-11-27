@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
-import PageContainer from '../components/pageContainer.js';
+import SuggestionsPage from '../components/SuggestionsPage';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -19,8 +19,8 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-      <PageContainer>
-      </PageContainer>
+      <SuggestionsPage>
+      </SuggestionsPage>
     );
   }
 }

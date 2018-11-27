@@ -18,32 +18,43 @@ export default class FoodRow extends React.Component {
   };
 
   render() {
+    if (this.props.showButtons){
+      return (
+        <View style={styles.card}>
+          <Text style={styles.foodName}>{this.props.food.name}</Text>
+          <Text style={styles.foodDiningHall}>{this.props.food.diningHall}</Text>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.thumbsUp} onPress={() => this.props.handleThumbsUp(this.props.food.id)}>
+              <View style={styles.iconContainer}>
+                <Icon
+                  name='thumb-up'
+                  color="#00A591"
+                />
+                <Text style={styles.thumbsUpText}>{this.props.food.thumbsUp}</Text>
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.thumbsDown} onPress={() => this.props.handleThumbsDown(this.props.food.id)}>
+              <View style={styles.iconContainer}>
+                <Icon
+                  name='thumb-down'
+                  color="#E94B3C"
+                />
+                <Text style={styles.thumbsDownText}>{this.props.food.thumbsDown}</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+      );
+  }
+  else {
     return (
       <View style={styles.card}>
         <Text style={styles.foodName}>{this.props.food.name}</Text>
         <Text style={styles.foodDiningHall}>{this.props.food.diningHall}</Text>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.thumbsUp} onPress={() => this.props.handleThumbsUp(this.props.food.id)}>
-            <View style={styles.iconContainer}>
-              <Icon
-                name='thumb-up'
-                color="#00A591"
-              />
-              <Text style={styles.thumbsUpText}>{this.props.food.thumbsUp}</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.thumbsDown} onPress={() => this.props.handleThumbsDown(this.props.food.id)}>
-            <View style={styles.iconContainer}>
-              <Icon
-                name='thumb-down'
-                color="#E94B3C"
-              />
-              <Text style={styles.thumbsDownText}>{this.props.food.thumbsDown}</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
       </View>
-    );
+    )
+  }
+
   }
 }
 

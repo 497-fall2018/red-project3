@@ -19,7 +19,7 @@ var tempTop5Foods = [
   {id: 5, name: "Fried Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
 ];
 
-export default class PageContainer extends React.Component {
+export default class Top5Page extends React.Component {
   constructor() {
     super();
     this.state = {top5Foods: tempTop5Foods};
@@ -58,6 +58,7 @@ export default class PageContainer extends React.Component {
                     food={f}
                     handleThumbsUp={this.handleThumbsUp}
                     handleThumbsDown={this.handleThumbsDown}
+                    showButtons = {true}
                     />
             })}
           </View>
