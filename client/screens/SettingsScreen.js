@@ -4,6 +4,7 @@ import {
   Text,
   View,
   Image,
+  TouchableOpacity,
   ScrollView,
 } from 'react-native';
 import { CheckBox } from 'react-native-elements';
@@ -19,11 +20,20 @@ const preferences = [
   "Bread"
 ];
 
+const dietaryRestrictions = [
+  "Vegan",
+  "Vegetarian",
+  "Balanced",
+  "Avoiding Gluten"
+]
+
 export default class SettingsScreen extends Component {
   constructor() {
     super();
     this.state = {
-      checkedPreferences: new Array(preferences.length).fill(false)
+      checkedPreferences: new Array(preferences.length).fill(false),
+      checkedRestrictions: new Array(dietaryRestrictions.length).fill(false),
+      dietOptions: false
     };
   }
 
@@ -34,39 +44,71 @@ export default class SettingsScreen extends Component {
     this.setState({checkedPreferences: clonedArray});
   }
 
+  checkRestrictions = name => {
+    var clonedArray = JSON.parse(JSON.stringify(this.state.checkedRestrictions));
+    var findex = dietaryRestrictions.findIndex(pref => pref === name);
+    clonedArray[findex] = !clonedArray[findex];
+    this.setState({checkedRestrictions: clonedArray});
+  }
+
+  changePrefTab = pref => {
+    this.setState({dietOptions: pref})
+  }
+
   render() {
     var key = -1;
     return (
-      <View style={styles.container}>
-          <View style={styles.header}>
-            <View style={styles.headerContent}>
-                <Image style={styles.avatar}
-                  source={{uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'}}/>
-                <Text style={styles.name}>Michael Born</Text>
-                <Text style={styles.userInfo}>michaelborn@mail.com </Text>
+        <View style={styles.container}>
+            <View style={styles.header}>
+              <View style={styles.headerContent}>
+                  <Image style={styles.avatar}
+                    source={{uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'}}/>
+                  <Text style={styles.name}>Michael Born</Text>
+                  <Text style={styles.userInfo}>michaelborn@mail.com </Text>
+              </View>
+              <View style={styles.preftabContainer}>
+                <TouchableOpacity style={styles.prefTabButton} onPress={() => this.changePrefTab(true)}>
+                    <Text style={styles.prefTabName}> Your Food Preferences </Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.prefTabButton} onPress={() => this.changePrefTab(false)}>
+                    <Text style={styles.prefTabName}> Dietary Restrictions </Text>
+                </TouchableOpacity>
+              </View>
             </View>
-            <Text style={styles.headerText}>List your preferences</Text>
-          </View>
 
-          <ScrollView>
-            {preferences.map(p => {
-                key++;
-                return <CheckBox
-                  key={key}
-                  center
-                  title={p}
-                  iconRight
-                  iconType='material'
-                  checkedIcon='check'
-                  uncheckedIcon='add'
-                  checkedColor='red'
-                  checked={this.state.checkedPreferences[key]}
-                  onPress={() => this.checkPreference(p)}
-                />
-            })}
-          </ScrollView>
-      </View>
-    );
+              <ScrollView>
+                {this.state.dietOptions ? dietaryRestrictions.map(p => {
+                    key++;
+                    return <CheckBox
+                      key={key}
+                      center
+                      title={p}
+                      iconRight
+                      iconType='material'
+                      checkedIcon='check'
+                      uncheckedIcon='add'
+                      checkedColor='red'
+                      checked={this.state.checkedRestrictions[key]}
+                      onPress={() => this.checkRestrictions(p)}
+                    />
+                }) : preferences.map(p => {
+                    key++;
+                    return <CheckBox
+                      key={key}
+                      center
+                      title={p}
+                      iconRight
+                      iconType='material'
+                      checkedIcon='check'
+                      uncheckedIcon='add'
+                      checkedColor='red'
+                      checked={this.state.checkedPreferences[key]}
+                      onPress={() => this.checkPreference(p)}
+                    />
+                })}
+              </ScrollView>
+          </View>
+        );
   }
 }
 
@@ -92,6 +134,24 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: "white",
     marginBottom:10,
+  },
+  prefTabButton: {
+    alignItems: 'center',
+    width: 160,
+    borderRadius: 4,
+    backgroundColor: "#00A591",
+    margin: 7.5,
+    padding: 5
+  },
+  prefTabName: {
+    fontSize: 13,
+    color: "#000000",
+    fontWeight:'600',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  preftabContainer: {
+    flexDirection: 'row'
   },
   name:{
     fontSize:22,
