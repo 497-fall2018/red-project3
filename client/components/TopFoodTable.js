@@ -49,7 +49,7 @@ export default class Top5Page extends React.Component {
                     variables= {{ date: this.props.date, timeOfDay: this.props.timeOfDay }}>
                     {
                         ({ data }) => {
-                          // console.log(data);
+                          console.log(data);
                           data.topFoodsOverall.map(food => (
                                 <FoodRow key={food.id}
                                          food={food}
