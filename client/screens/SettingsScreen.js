@@ -57,7 +57,7 @@ export default class SettingsScreen extends Component {
                   title={p}
                   iconRight
                   iconType='material'
-                  checkedIcon='clear'
+                  checkedIcon='check'
                   uncheckedIcon='add'
                   checkedColor='red'
                   checked={this.state.checkedPreferences[key]}
