@@ -20,7 +20,7 @@ query {topFoodsOverall(num: 5, isHall: true, date: "2018-11-15", timeOfDay: "Lun
 }
 `
 
-class App extends React.Component {
+export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
@@ -116,6 +116,8 @@ class App extends React.Component {
     this.setState({ isLoadingComplete: true });
   };
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
