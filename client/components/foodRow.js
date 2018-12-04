@@ -1,16 +1,32 @@
 import React from 'react';
 import {
-  Image,
-  Platform,
-  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
-  Button,
 } from 'react-native';
-import { MonoText } from './StyledText';
 import { Icon } from 'react-native-elements'
+
+import gql from "graphql-tag";
+import { Mutation } from "react-apollo";
+
+const THUMBS_UP = gql`
+  mutation THUMBS_UP($foodId: ID!) {
+    thumbsUp(id: $foodId) {
+      id
+      thumbsUp
+    }
+  }
+`;
+
+const THUMBS_DOWN = gql`
+  mutation THUMBS_DOWN($foodId : ID!) {
+    thumbsDown(id: $foodId) {
+      id
+      thumbsDown
+    }
+  }
+`;
 
 export default class FoodRow extends React.Component {
   static navigationOptions = {
@@ -22,26 +38,41 @@ export default class FoodRow extends React.Component {
       return (
         <View style={styles.card}>
           <Text style={styles.foodName}>{this.props.food.name}</Text>
-          <Text style={styles.foodDiningHall}>{this.props.food.diningHall}</Text>
+          <Text style={styles.foodDiningHall}>{this.props.food.dining.name}</Text>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.thumbsUp} onPress={() => this.props.handleThumbsUp(this.props.food.id)}>
-              <View style={styles.iconContainer}>
-                <Icon
-                  name='thumb-up'
-                  color="#00A591"
-                />
-                <Text style={styles.thumbsUpText}>{this.props.food.thumbsUp}</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.thumbsDown} onPress={() => this.props.handleThumbsDown(this.props.food.id)}>
-              <View style={styles.iconContainer}>
-                <Icon
-                  name='thumb-down'
-                  color="#E94B3C"
-                />
-                <Text style={styles.thumbsDownText}>{this.props.food.thumbsDown}</Text>
-              </View>
-            </TouchableOpacity>
+            <Mutation mutation={THUMBS_UP}
+                      variables={{ foodId: this.props.food.id }}>
+            {
+              (thumbsUp, { data }) =>
+                <TouchableOpacity style={styles.thumbsUp}
+                                  onPress={() => thumbsUp()}>
+                <View style={styles.iconContainer}>
+                  <Icon
+                    name='thumb-up'
+                    color="#00A591"
+                  />
+                  <Text style={styles.thumbsUpText}>{this.props.food.thumbsUp}</Text>
+                </View>
+              </TouchableOpacity>
+            }
+            </Mutation>
+            <Mutation mutation={THUMBS_DOWN}
+                      variables={{ foodId : this.props.food.id }}>
+              {
+                (thumbsDown, { data }) => (
+                <TouchableOpacity style={styles.thumbsDown} 
+                                  onPress={() => thumbsDown()}>
+                  <View style={styles.iconContainer}>
+                    <Icon
+                      name='thumb-down'
+                      color="#00A591"
+                    />
+                    <Text style={styles.thumbsDownText}>{this.props.food.thumbsDown}</Text>
+                  </View>
+                </TouchableOpacity>
+                )
+              }
+            </Mutation>
           </View>
         </View>
       );
@@ -50,7 +81,7 @@ export default class FoodRow extends React.Component {
     return (
       <View style={styles.card}>
         <Text style={styles.foodName}>{this.props.food.name}</Text>
-        <Text style={styles.foodDiningHall}>{this.props.food.diningHall}</Text>
+        <Text style={styles.foodDiningHall}>{this.props.food.dining.name}</Text>
       </View>
     )
   }

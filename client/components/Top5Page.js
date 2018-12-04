@@ -10,38 +10,13 @@ import {
 } from 'react-native';
 import { MonoText } from '../components/StyledText';
 import FoodRow from './foodRow';
-
-var tempTop5Foods = [
-  {id: 1, name: "Philly Cheese Steak Sandwich", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
-  {id: 2, name: "Hamburger Patty", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
-  {id: 3, name: "Crispy Fish Taco", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
-  {id: 4, name: "Pork Carnitas Tacos", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
-  {id: 5, name: "Fried Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
-];
+import TopFoodTable from './TopFoodTable'
 
 export default class Top5Page extends React.Component {
-  constructor() {
-    super();
-    this.state = {top5Foods: tempTop5Foods};
-  }
 
   static navigationOptions = {
     header: null,
   };
-
-  handleThumbsUp = foodId => {
-    var clonedArray = JSON.parse(JSON.stringify(this.state.top5Foods));
-    var food = clonedArray.find((el) => el.id == foodId);
-    food.thumbsUp += 1
-    this.setState({top5Foods: clonedArray});
-  }
-
-  handleThumbsDown = foodId => {
-    var clonedArray = JSON.parse(JSON.stringify(this.state.top5Foods));
-    var food = clonedArray.find((el) => el.id == foodId);
-    food.thumbsDown += 1
-    this.setState({top5Foods: clonedArray});
-  }
 
   render() {
     return (
@@ -52,15 +27,9 @@ export default class Top5Page extends React.Component {
             <View style={styles.timeOfDayContainer}>
               <Text style={styles.timeOfDay}>Lunch</Text>
             </View>
-            {this.state.top5Foods.map(f => {
-                return <FoodRow
-                    key={f.id}
-                    food={f}
-                    handleThumbsUp={this.handleThumbsUp}
-                    handleThumbsDown={this.handleThumbsDown}
-                    showButtons = {true}
-                    />
-            })}
+            <TopFoodTable date="2018-11-15"
+                          timeOfDay="Lunch"
+                          showButtons={true} />
           </View>
         </ScrollView>
 

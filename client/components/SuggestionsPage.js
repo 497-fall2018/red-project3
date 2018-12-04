@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Image,
   Platform,
   ScrollView,
   StyleSheet,
@@ -8,7 +7,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { MonoText } from '../components/StyledText';
 import FoodRow from './foodRow';
 
 var tempTop5Foods = [
