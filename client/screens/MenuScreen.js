@@ -41,16 +41,28 @@ var Menus = {
   },
   "Plex West": {
     Breakfast: [
-      {id: 1, name: "fjaseiojfoiasjefoiasjh", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "jfoieasjofijasiodji", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0}
+      {id: 1, name: "Spanish Egg Scramble ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Scrambled Eggs", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Brussels Sprouts with Chorizo ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Oatmeal ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Eggs", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 6, name: "Apple Spice Muffin ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
     ],
     Lunch: [
-      {id: 1, name: "111111111", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "2222222222", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0}
+      {id: 1, name: "Grilled Adobo Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Coconut and Pineapple Rice", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Philly Cheese Steak Sandwich ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Tomato & Spinach Pizza  ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Fenway Frank ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 6, name: "Zucchini, Pancetta & Cherry Tomato Pizza ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
     ],
     Dinner: [
-      {id: 1, name: "Philly Cheese Steak Sandwich", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "Hamburger", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0}
+      {id: 1, name: "Baked Chicken ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Herb Roasted Potato Wedges ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Four Cheese Flat Bread ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Batter Fried Cod ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Italian Meatball Sub ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 6, name: "Curly-Q French Fries  ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
     ],
   },
   "Plex East": {
@@ -66,12 +78,29 @@ var Menus = {
   },
   "Hinman": {
     Breakfast: [
+      {id: 1, name: "Chicken Masala Spice Hash", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Scrambled Eggs", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "French Toast Sticks", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Broccoli Tofu Stir Fry", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Eggs", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 6, name: "Mediterranean Breakfast Bowl", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
 
     ],
     Lunch: [
-
+      {id: 1, name: "Grilled Adobo Chicken", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Coconut and Pineapple Rice", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Cheese Pizza ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Roasted Fennel and Nectarine Salad ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Steamed Zucchini ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 6, name: "BWB The Egyptian slider ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
     ],
     Dinner: [
+      {id: 1, name: "Baked Chicken ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Batter Fried Cod ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Four Cheese Flat Bread ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Bean and Tomato Chili ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Roasted Vegetable Salad  ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
+      {id: 6, name: "Wheat Hamburger Bun ", diningHall: "Himan", thumbsUp: 0, thumbsDown: 0},
 
     ],
   },
