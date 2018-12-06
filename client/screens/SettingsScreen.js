@@ -154,7 +154,6 @@ const styles = StyleSheet.create({
   },
   preftabContainer: {
     flexDirection: 'row',
-    marginLeft: 30,
   },
   name:{
     fontSize:22,
