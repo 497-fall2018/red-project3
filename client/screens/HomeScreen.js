@@ -45,7 +45,7 @@ export default class HomeScreen extends React.Component {
   
     // Get the token that uniquely identifies this device
 
-    token=await Notifications.getExpoPushTokenAsync();
+    const token=await Notifications.getExpoPushTokenAsync();
     console.log(token);
   }
 
