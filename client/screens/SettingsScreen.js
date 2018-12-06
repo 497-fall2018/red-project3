@@ -64,7 +64,7 @@ export default class SettingsScreen extends Component {
                   <Image style={styles.avatar}
                     source={{uri: 'https://bootdey.com/img/Content/avatar/avatar6.png'}}/>
                   <Text style={styles.name}>Michael Born</Text>
-                  <Text style={styles.userInfo}>michaelborn@mail.com </Text>
+                  <Text style={styles.userInfo}>michaelborn@u.northwestern.edu </Text>
               </View>
               <View style={styles.preftabContainer}>
                 <TouchableOpacity style={styles.prefTabButton} onPress={() => this.changePrefTab(false)}>
@@ -137,11 +137,12 @@ const styles = StyleSheet.create({
   },
   prefTabButton: {
     alignItems: 'center',
-    width: 160,
+    width: 190,
     borderRadius: 4,
     backgroundColor: "#00A591",
     margin: 7.5,
-    padding: 5
+    padding: 5,
+    marginBottom:20,
   },
   prefTabName: {
     fontSize: 13,

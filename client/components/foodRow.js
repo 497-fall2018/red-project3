@@ -73,34 +73,42 @@ const styles = StyleSheet.create({
   },
   foodDiningHall: {
     fontSize: 14,
+    marginBottom:10
   },
   buttonContainer: {
     flexDirection:'row',
   },
   thumbsUp: {
-    width: '50%',
+    width: '40%',
     borderWidth: 2,
     borderRadius: 4,
     borderColor: '#00A591',
     flexDirection:'row',
     alignItems: 'center',
     textAlign: 'center',
+    marginRight:20,
+    marginLeft:20
   },
   thumbsUpText: {
     color: '#00A591',
     fontSize: 14,
     marginLeft: 5,
+    textAlign: 'center',
   },
   thumbsDown: {
-    width: '50%',
+    width: '40%',
     borderWidth: 2,
     borderRadius: 4,
     borderColor: '#E94B3C',
+    flexDirection:'row',
+    alignItems: 'center',
+    textAlign: 'center',
   },
   thumbsDownText: {
     color: '#E94B3C',
     fontSize: 14,
     marginLeft: 5,
+    textAlign: 'center',
   },
   iconContainer: {
     flexDirection:'row',
