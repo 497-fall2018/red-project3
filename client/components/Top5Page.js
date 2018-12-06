@@ -12,11 +12,11 @@ import { MonoText } from '../components/StyledText';
 import FoodRow from './foodRow';
 
 var tempTop5Foods = [
-  {id: 1, name: "Philly Cheese Steak Sandwich", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
-  {id: 2, name: "Hamburger Patty", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
-  {id: 3, name: "Crispy Fish Taco", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
-  {id: 4, name: "Pork Carnitas Tacos", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
-  {id: 5, name: "Fried Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+  {id: 1, name: "Philly Cheese Steak Sandwich", diningHall: "Plex West", thumbsUp: 15, thumbsDown: 3},
+  {id: 2, name: "Hamburger Patty", diningHall: "Sargent", thumbsUp: 10, thumbsDown: 4},
+  {id: 3, name: "Crispy Fish Taco", diningHall: "Allison", thumbsUp: 8, thumbsDown: 5},
+  {id: 4, name: "Pork Carnitas Tacos", diningHall: "Sargent", thumbsUp: 6, thumbsDown: 6},
+  {id: 5, name: "Fried Chicken", diningHall: "Plex West", thumbsUp: 6, thumbsDown: 6},
 ];
 
 export default class Top5Page extends React.Component {

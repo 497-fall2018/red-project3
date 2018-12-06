@@ -17,7 +17,8 @@ const preferences = [
   "Pasta",
   "Stir fry",
   "Fries",
-  "Bread"
+  "Bread",
+  "Rice"
 ];
 
 const dietaryRestrictions = [

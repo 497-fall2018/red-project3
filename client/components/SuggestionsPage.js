@@ -20,9 +20,27 @@ var tempTop5Foods = [
 ];
 
 var SuggestedFoods = {
-  Breakfast : [{id: 1, name: "Pancakes", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0}, {id: 2, name: "Frosted Flakes", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0}],
-  Lunch : [{id: 3, name: "Crispy Fish Taco", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0}, {id: 4, name: "Fried Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0}],
-  Dinner : [{id: 5, name: "Hamburger Patty", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0}, {id: 6, name: "Philly Cheese Steak", diningHall: "Plex East", thumbsUp: 0, thumbsDown: 0}]
+  Breakfast : [
+    {id: 1, name: "Omelets", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+    {id: 2, name: "Oatmeal", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+    {id: 3, name: "Hash Brown", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+    {id: 4, name: "Broccoli Tofu Stir Fry", diningHall: "Hinman", thumbsUp: 0, thumbsDown: 0},
+    {id: 5, name: "Mediterranean Breakfast Bowl", diningHall: "Hinman", thumbsUp: 0, thumbsDown: 0}
+  ],
+  Lunch : [
+    {id: 1, name: "Black Beans with Rice", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+    {id: 2, name: "Curried Chickpea with Quinoa, Pita", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+    {id: 3, name: "Roasted Vegetable Salad", diningHall: "Plex East", thumbsUp: 0, thumbsDown: 0},
+    {id: 4, name: "Cheese Pizza", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+    {id: 5, name: "Chana Masala", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+  ],
+  Dinner : [
+    {id: 1, name: "Hot & Spicy Tofu", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0}, 
+    {id: 2, name: "Saffron Farro Risotto", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+    {id: 3, name: "Spanish Rice", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+    {id: 4, name: "White Tomato Garlic & Oil Pizza", diningHall: "Hinman", thumbsUp: 0, thumbsDown: 0},
+    {id: 5, name: "Grilled Chicken", diningHall: "Plex East", thumbsUp: 0, thumbsDown: 0},
+  ]
 }
 
 

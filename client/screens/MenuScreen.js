@@ -52,7 +52,29 @@ var Menus = {
       {id: 1, name: "Philly Cheese Steak Sandwich", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
       {id: 2, name: "Hamburger", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0}
     ],
-  }
+  },
+  "Plex East": {
+    Breakfast: [
+
+    ],
+    Lunch: [
+
+    ],
+    Dinner: [
+
+    ],
+  },
+  "Hinman": {
+    Breakfast: [
+
+    ],
+    Lunch: [
+
+    ],
+    Dinner: [
+
+    ],
+  },
 }
 
 export default class MenuScreen extends React.Component {
@@ -87,8 +109,14 @@ export default class MenuScreen extends React.Component {
             <TouchableOpacity style={styles.diningHallButton} onPress={() => this.handleSelectedMenu('Sargent')}>
               <Text style={styles.diningHallName}>Sargent</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.diningHallButton} onPress={() => this.handleSelectedMenu('Hinman')}>
+              <Text style={styles.diningHallName}>Hinman</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.diningHallButton} onPress={() => this.handleSelectedMenu('Plex West')}>
               <Text style={styles.diningHallName}>Plex West</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.diningHallButton} onPress={() => this.handleSelectedMenu('Plex East')}>
+              <Text style={styles.diningHallName}>Plex East</Text>
             </TouchableOpacity>
           </View>
         </View>
