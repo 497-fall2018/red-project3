@@ -28,7 +28,7 @@ export default class HomeScreen extends React.Component {
       Permissions.NOTIFICATIONS
     );
     let finalStatus = existingStatus;
-  
+
     // only ask if permissions have not already been determined, because
     // iOS won't necessarily prompt the user a second time.
     if (existingStatus !== 'granted') {
@@ -37,15 +37,15 @@ export default class HomeScreen extends React.Component {
       const { status } = await Permissions.askAsync(Permissions.NOTIFICATIONS);
       finalStatus = status;
     }
-  
+
     // Stop here if the user did not grant permissions
     if (finalStatus !== 'granted') {
       return;
     }
-  
+
     // Get the token that uniquely identifies this device
 
-    token=await Notifications.getExpoPushTokenAsync();
+    const token=await Notifications.getExpoPushTokenAsync();
     console.log(token);
   }
 
@@ -53,7 +53,6 @@ export default class HomeScreen extends React.Component {
     return (
       <SuggestionsPage>
       </SuggestionsPage>
-  
     );
   }
 }

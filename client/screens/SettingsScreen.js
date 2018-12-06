@@ -67,16 +67,16 @@ export default class SettingsScreen extends Component {
                   <Text style={styles.userInfo}>michaelborn@mail.com </Text>
               </View>
               <View style={styles.preftabContainer}>
-                <TouchableOpacity style={styles.prefTabButton} onPress={() => this.changePrefTab(true)}>
+                <TouchableOpacity style={styles.prefTabButton} onPress={() => this.changePrefTab(false)}>
                     <Text style={styles.prefTabName}> Your Food Preferences </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.prefTabButton} onPress={() => this.changePrefTab(false)}>
+                <TouchableOpacity style={styles.prefTabButton} onPress={() => this.changePrefTab(true)}>
                     <Text style={styles.prefTabName}> Dietary Restrictions </Text>
                 </TouchableOpacity>
               </View>
             </View>
 
-              <ScrollView>
+              <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                 {this.state.dietOptions ? dietaryRestrictions.map(p => {
                     key++;
                     return <CheckBox
@@ -145,13 +145,15 @@ const styles = StyleSheet.create({
   },
   prefTabName: {
     fontSize: 13,
-    color: "#000000",
+    color: "#ffffff",
     fontWeight:'600',
     textAlign: 'center',
     marginBottom: 10,
+    marginTop: 10,
   },
   preftabContainer: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginLeft: 30,
   },
   name:{
     fontSize:22,
@@ -190,5 +192,15 @@ const styles = StyleSheet.create({
     fontSize:18,
     marginTop:20,
     color: "#FFFFFF",
-  }
+  },
+  preferencesScrollView: {
+
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  contentContainer: {
+    paddingTop: 30,
+  },
 });
