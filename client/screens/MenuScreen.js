@@ -13,30 +13,52 @@ import FoodRow from '../components/foodRow';
 var Menus = {
   "Allison": {
     Breakfast: [
-      {id: 1, name: "blublublbu", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "blublbulub", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0}
+      {id: 0, name: "Scrambled Eggs", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "French Toast Sticks", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Turkey Sausage Links", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Brussels Sprouts with Chorizo", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Hash Brown", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Mediterranean Breakfast Bowl", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
     ],
     Lunch: [
-      {id: 1, name: "blablalbalab", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "blalbalbalbal", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0}
+      {id: 0, name: "Beef Pot Pie", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "Garlic Mashed Potatoes", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Black Beans with Rice", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Cajun Chicken", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Steamed Red Potatoes", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Bacon Cheeseburger", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
     ],
     Dinner: [
-      {id: 1, name: "Crispy Fish Taco", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "Carnitas Burrito", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0}
+      {id: 0, name: "Lemon Thyme Chicken", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "Spicy Braised Baby Bok Choy", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Greek Chicken and Tzatziki", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Italian Sausage Flatbread", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "White Tomato Garlic & Oil Pizza", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Classic Chicken Noodle Soup", diningHall: "Allison", thumbsUp: 0, thumbsDown: 0},
     ],
   },
   "Sargent": {
     Breakfast: [
-      {id: 1, name: "aiiiiiiii", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "uuooooooo", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0}
+      {id: 0, name: "Scrambled Eggs", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "Oatmeal", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Blueberry Danish", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Egg & Cheese Flatbread", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
     ],
     Lunch: [
-      {id: 1, name: "aaaaaaaaaaa", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "uuuuuuuuuuu", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0}
+      {id: 0, name: "Stuffed Pasta Shells", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "Quinoa and Lentil Salad", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Chana Masala", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Grilled Chicken", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Grilled Cheese and Tomato Sandwich", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Churasco Pork", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
     ],
     Dinner: [
-      {id: 1, name: "Pork Carnitas Tacos", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
-      {id: 2, name: "Potato Salad", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0}
+      {id: 0, name: "Italian Sausage with Peppers", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "Sauteed Green Beads", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Roasted Potatoes", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Curly Q Frech Fries", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Meatless Black Bean Burger", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Four Cheese Flatbread", diningHall: "Sargent", thumbsUp: 0, thumbsDown: 0},
     ],
   },
   "Plex West": {
@@ -58,10 +80,20 @@ var Menus = {
 
     ],
     Lunch: [
-
+      {id: 0, name: "Grilled Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "Chopped Chinese Broccoli", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Rice Noodles", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Roasted Fennel and Nectarine Salad ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Black Beans with Rice", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Balsamic Glazed Pork", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
     ],
     Dinner: [
-
+      {id: 0, name: "Roast Pork Loin ", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 1, name: "Grilled Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 2, name: "Black Bean, Mango and Avocado Salad", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 3, name: "Spanish Rice", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 4, name: "Lentil Picadillo Taco", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
+      {id: 5, name: "Grilled Adobo Chicken", diningHall: "Plex West", thumbsUp: 0, thumbsDown: 0},
     ],
   },
   "Hinman": {
